@@ -22,15 +22,13 @@ def students_list(request):
         df = pd.DataFrame.from_records(q)
         mean_df=df['score'].mean()
         min_df=df['score'].min() 
-        max_df=df['score'].max() 
-        count_df=df['score'].count()       # Students_csv = djqscsv.render_to_csv_response(students)
+        max_df=df['score'].max()         # Students_csv = djqscsv.render_to_csv_response(students)
         # hi = pandas.read_csv(Students_csv)
         print(mean_df)
         context ={ 
             "mean":mean_df, 
             "min":min_df,
-            "max":max_df,
-            "count":count_df
+            "max":max_df
                }       # serializers = StudentSerializers(students,many=True)
         return Response(context)
 

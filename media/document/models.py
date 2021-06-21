@@ -8,14 +8,9 @@ from django.db import models
 
 
 class Students(models.Model):
-    # id = models.IntegerField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length = 20)
     score = models.DecimalField(max_digits=10,decimal_places=3)
-
-class Students1(models.Model):
-    # id = models.IntegerField(primary_key=True)
-    name1 = models.CharField(max_length = 20)
-    score1 = models.DecimalField(max_digits=10,decimal_places=3)
 
 
 
